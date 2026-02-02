@@ -137,12 +137,12 @@ def generate_html_report(cpu, ram, disk, network):
     </head>
     <body>
         <div class="header">
-            <h1>📊 Rapport de Monitoring Système</h1>
+            <h1>Rapport de Monitoring Système</h1>
             <p>Surveillance en temps réel de votre Mac</p>
         </div>
         
         <div class="card">
-            <h2>🖥️ Processeur (CPU)</h2>
+            <h2>Processeur (CPU)</h2>
             <div class="metric {'alert' if cpu['alert'] else ''}">
                 <span>Utilisation CPU</span>
                 <span class="value">{cpu['usage']:.1f}%</span>
@@ -156,7 +156,7 @@ def generate_html_report(cpu, ram, disk, network):
         </div>
         
         <div class="card">
-            <h2>💾 Mémoire RAM</h2>
+            <h2>Mémoire RAM</h2>
             <div class="metric {'alert' if ram['alert'] else ''}">
                 <span>Utilisation RAM</span>
                 <span class="value">{ram['percent']:.1f}%</span>
@@ -172,7 +172,7 @@ def generate_html_report(cpu, ram, disk, network):
         </div>
         
         <div class="card">
-            <h2>💿 Disque Dur</h2>
+            <h2>Disque Dur</h2>
             <div class="metric {'alert' if disk['alert'] else ''}">
                 <span>Utilisation Disque</span>
                 <span class="value">{disk['percent']:.1f}%</span>
@@ -188,7 +188,7 @@ def generate_html_report(cpu, ram, disk, network):
         </div>
         
         <div class="card">
-            <h2>🌐 Réseau</h2>
+            <h2>Réseau</h2>
             <div class="metric">
                 <span>Données envoyées</span>
                 <span class="value">{network['bytes_sent']:.2f} MB</span>
@@ -210,7 +210,7 @@ def generate_html_report(cpu, ram, disk, network):
 
 def main():
     """Fonction principale"""
-    print("🔍 Analyse du système en cours...")
+    print("Analyse du système en cours...")
     
     # Collecte des informations
     cpu_info = get_cpu_info()
@@ -232,8 +232,8 @@ def main():
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(html_content)
     
-    print(f"\n✅ Rapport généré : {filename}")
-    print(f"📂 Ouvrez le fichier dans votre navigateur pour voir le rapport complet")
+    print(f"\nRapport généré : {filename}")
+    print(f"Ouvrez le fichier dans votre navigateur pour voir le rapport complet")
 
 if __name__ == "__main__":
     main()
